@@ -32,6 +32,7 @@ def data_preprocessing(file_name, csv_file_name):
     df["proto"] = df["proto"].astype("category").cat.codes
     df["service"] = df["service"].astype("category").cat.codes
     df["history"] = df["history"].astype("category").cat.codes
+    df["conn_state"] = df["conn_state"].astype("category").cat.codes
     
     #replacing all - values in these columns to be numpy nan values
     df['duration'] = df['duration'].replace("-", np.nan)
@@ -65,7 +66,7 @@ if __name__ == "__main__":
     file_name = arguments[1]
     csv_file_name = arguments[2]
     #Determines if the given file name is not conn.log.labeled and if so exits the program
-    if(file_name != "conn.log.labeled"):
+    if("conn.log.labeled" not in file_name):
         print("incorrect data file, looking for conn.log.labeled")
         sys.exit(1)
     #Determines if the csv file name does not have the csv extenstion and exits the program
