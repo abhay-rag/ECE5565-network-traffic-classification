@@ -1,6 +1,6 @@
 # ECE5565-network-traffic-classification
 
-Link yo the Aposemat IoT-23 dataset: https://www.stratosphereips.org/datasets-iot23
+Link to the Aposemat IoT-23 dataset: https://www.stratosphereips.org/datasets-iot23
 
 The data preperation and advanced data preperation files are used to preprocess the conn.log.labeled files from the Aposemat IoT-23 dataset. 
 
